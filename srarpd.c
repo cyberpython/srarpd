@@ -188,6 +188,8 @@ int send_response(unsigned char *own_mac_addr, unsigned char *dst_mac_addr, rarp
       result = -2;
     }
 
+    free(buf);
+
   } else {
     error("Could not allocate buffer for transmission.");
     result = -1;
